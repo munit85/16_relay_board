@@ -1,0 +1,179 @@
+esphome:
+  name: esp-relay
+  friendly_name: Esp_Relay	
+
+esp8266:
+  board: esp01_1m
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "5KKKGOGb1Gpv5tf+7oeFdDASSN7G6Cu2sBaDxn+fjTg="
+
+ota:
+
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+i2c:
+- id: i2c_1
+  scan: true
+  scl: GPIO5
+  sda: GPIO4
+
+pcf8574:
+- address: '0x27'
+  id: pcf8575_1
+  pcf8575: true
+
+switch:
+  - platform: gpio
+    name: "relay 1"
+    pin:
+      pcf8574: pcf8575_1
+      # Use pin number 0
+      number: 0
+      mode:
+        output: true
+      inverted: false
+  - platform: gpio
+    name: "relay 2"
+    pin:
+      pcf8574: pcf8575_1
+      # Use pin number 1
+      number: 1
+      mode:
+        output: true
+      inverted: false
+  - platform: gpio
+    name: "relay 3"
+    pin:
+      pcf8574: pcf8575_1
+      # Use pin number 2
+      number: 2
+      mode:
+        output: true
+      inverted: false
+  - platform: gpio
+    name: "relay 4"
+    pin:
+      pcf8574: pcf8575_1
+      # Use pin number 3
+      number: 3
+      mode:
+        output: true
+      inverted: false
+  - platform: gpio
+    name: "relay 5"
+    pin:
+      pcf8574: pcf8575_1
+      # Use pin number 4
+      number: 4
+      mode:
+        output: true
+      inverted: false
+  - platform: gpio
+    name: "relay 6"
+    pin:
+      pcf8574: pcf8575_1
+      # Use pin number 5
+      number: 5
+      mode:
+        output: true
+      inverted: false
+  - platform: gpio
+    name: "relay 7"
+    pin:
+      pcf8574: pcf8575_1
+      # Use pin number 6
+      number: 6
+      mode:
+        output: true
+      inverted: false
+  - platform: gpio
+    name: "relay 8"
+    pin:
+      pcf8574: pcf8575_1
+      # Use pin number 7
+      number: 7
+      mode:
+        output: true
+      inverted: false
+  - platform: gpio
+    name: "relay 9"
+    pin:
+      pcf8574: pcf8575_1
+      # Use pin number 8
+      number: 8
+      mode:
+        output: true
+      inverted: false
+  - platform: gpio
+    name: "relay 10"
+    pin:
+      pcf8574: pcf8575_1
+      # Use pin number 9
+      number: 9
+      mode:
+        output: true
+      inverted: false
+
+  - platform: gpio
+    name: "relay 11"
+    pin:
+      pcf8574: pcf8575_1
+      # Use pin number 10
+      number: 10
+      mode:
+        output: true
+      inverted: false
+  - platform: gpio
+    name: "relay 12"
+    pin:
+      pcf8574: pcf8575_1
+      # Use pin number 11
+      number: 11
+      mode:
+        output: true
+      inverted: false
+  - platform: gpio
+    name: "relay 13"
+    pin:
+      pcf8574: pcf8575_1
+      # Use pin number 12
+      number: 12
+      mode:
+        output: true
+      inverted: false
+  - platform: gpio
+    name: "relay 14"
+    pin:
+      pcf8574: pcf8575_1
+      # Use pin number 13
+      number: 13
+      mode:
+        output: true
+      inverted: false
+  - platform: gpio
+    name: "relay 15"
+    pin:
+      pcf8574: pcf8575_1
+      # Use pin number 14
+      number: 14
+      mode:
+        output: true
+      inverted: false
+  - platform: gpio
+    name: "relay 16"
+    pin:
+      pcf8574: pcf8575_1
+      # Use pin number 15
+      number: 15
+      mode:
+        output: true
+      inverted: false
