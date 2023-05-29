@@ -14,7 +14,7 @@ Flashing the ESP board is the tricky part because it doesn't have a usb interfac
 
 I had to buy a usb to ttl device and solder some header pins to be able to flash it.  I bought a board that utilizes CH340G off of aliexpress for a few dollars.
 
-![programming] (photos/esp_programming.jpg)
+![programming](photos/esp_programming.jpg)
 
 Important info: make sure the usb device is on the 3.3v setting and not 5v.
 The TX and RX wires swap. Meaning TX on the usb is RX on the esp device and vice versa
